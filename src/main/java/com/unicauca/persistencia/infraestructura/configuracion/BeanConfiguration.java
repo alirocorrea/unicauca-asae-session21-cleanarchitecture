@@ -1,4 +1,4 @@
-package com.unicauca.persistencia.infraestructura.config;
+package com.unicauca.persistencia.infraestructura.configuracion;
 
 import com.unicauca.persistencia.aplicacion.output.DocenteGatewayOutputPort;
 import com.unicauca.persistencia.aplicacion.output.EspacioFisicoGatewayOutputPort;
