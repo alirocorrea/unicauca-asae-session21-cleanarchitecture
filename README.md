@@ -26,11 +26,11 @@ La aplicación está estructurada bajo el enfoque hexagonal, separando las capas
 
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/usuario/proyecto-asae.git
+git clone https://github.com/alirocorrea/unicauca-asae-session21-cleanarchitecture.git
 ```
 2. Ingresa al directorio del proyecto:
 ```bash
-cd proyecto-asae
+cd unicauca-asae-session21-cleanarchitecture
 ```
 3. Compila el proyecto y descarga las dependencias:
 ```bash
