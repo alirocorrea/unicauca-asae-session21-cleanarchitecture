@@ -1,7 +1,9 @@
 package com.unicauca.persistencia.infraestructura.input.dtos.peticion;
 
+import com.unicauca.persistencia.infraestructura.input.utilidades.Constantes;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,6 +19,7 @@ public class FranjaHorariaDTOPeticion {
     private String nombre;
 
     @NotBlank(message = "{franja.dia.blank}")
+    @Pattern(regexp = Constantes.REGEX_DIA_SEMANA , message = "{franja.dia.pattern}")
     private String dia;
 
     @NotNull(message = "{franja.horaInicio.null}")
