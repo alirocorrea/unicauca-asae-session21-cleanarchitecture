@@ -18,7 +18,7 @@ public class EspacioFisicoGatewayImpl implements EspacioFisicoGatewayOutputPort 
 
     @Override
     public List<EspacioFisico> listarEspacioFisicos(final String nombre, final Integer capacidad) {
-        List<EspacioFisicoEntity> espacioFisicoEntities = espacioFisicoRepository.findByNombreStartingWithIgnoreCaseAndCapacidadGreaterThanEqualOrderByNombreAsc(nombre, capacidad);
+        final List<EspacioFisicoEntity> espacioFisicoEntities = espacioFisicoRepository.findByNombreStartingWithIgnoreCaseAndCapacidadGreaterThanEqualOrderByNombreAsc(nombre, capacidad);
         return espacioFisicoEntities.stream().map(EspacioFisicoOutputMapper::buildEspacioFisico).toList();
     }
 
