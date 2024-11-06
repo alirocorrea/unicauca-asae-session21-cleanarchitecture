@@ -74,7 +74,7 @@ public class FranjaHorariaGatewayImpl implements FranjaHorariaGatewayOutputPort 
 
     @Override
     @Transactional
-    public List<FranjaHoraria> listarFranjaHorariaPorDocente(Integer idDocente) {
+    public List<FranjaHoraria> listarFranjaHorariaPorDocente(final Integer idDocente) {
         DocenteEntity docenteEntity = docenteRepository.getReferenceById(idDocente);
         List<CursoEntity> cursosDocente = docenteEntity.getCurso().stream().toList();
         List<FranjaHorariaEntity> franjasHorariasEntities = franjaHorariaRepository.findFranjaHorariaByCursoIn(cursosDocente);
