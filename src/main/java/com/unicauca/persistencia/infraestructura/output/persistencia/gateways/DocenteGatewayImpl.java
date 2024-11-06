@@ -15,12 +15,12 @@ public class DocenteGatewayImpl implements DocenteGatewayOutputPort {
     private final DocenteRepository docenteRepository;
 
     @Override
-    public boolean existeDocentePorCorreo(String correo) {
+    public boolean existeDocentePorCorreo(final String correo) {
         return docenteRepository.existsByCorreo(correo);
     }
 
     @Override
-    public Docente guardarDocente(Docente docente) {
+    public Docente guardarDocente(final Docente docente) {
         final DocenteEntity docenteEntidad = DocenteOutputMapper.mapDocenteEntity(docente);
         docenteRepository.save(docenteEntidad);
         docente.setId(docenteEntidad.getId());
