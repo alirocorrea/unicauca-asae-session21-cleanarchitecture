@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class EspacioFisicoOutputMapper {
 
-    public static EspacioFisico buildEspacioFisico(EspacioFisicoEntity espacioFisicoEntity) {
+    public static EspacioFisico buildEspacioFisico(final EspacioFisicoEntity espacioFisicoEntity) {
         return EspacioFisico.builder()
                 .id(espacioFisicoEntity.getId())
                 .capacidad(espacioFisicoEntity.getCapacidad())
