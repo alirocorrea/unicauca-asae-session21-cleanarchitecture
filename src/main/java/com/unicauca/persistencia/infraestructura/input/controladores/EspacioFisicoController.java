@@ -26,7 +26,7 @@ public class EspacioFisicoController {
             @RequestParam(defaultValue = "") final String nombre,
             @RequestParam(defaultValue = "0") final Integer capacidad
     ) {
-        List<EspacioFisico> espacioFisicos = espacioFisicoInputPort.listaEspacioFisicos(nombre, capacidad);
+        final List<EspacioFisico> espacioFisicos = espacioFisicoInputPort.listaEspacioFisicos(nombre, capacidad);
         return new ResponseEntity<>(EspacioFisicoInputMapper.buildListEspacioFisicoDTORespuesta(espacioFisicos), HttpStatus.OK);
     }
 }
