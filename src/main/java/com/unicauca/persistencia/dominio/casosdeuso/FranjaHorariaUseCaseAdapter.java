@@ -15,7 +15,7 @@ public class FranjaHorariaUseCaseAdapter implements FranjaHorariaInputPort {
     private FormateadorRespuestaOutputPort formateadorRespuesta;
 
     @Override
-    public FranjaHoraria crearFranjaHoraria(FranjaHoraria franjaHoraria) {
+    public FranjaHoraria crearFranjaHoraria(final FranjaHoraria franjaHoraria) {
         if (!franjaHorariaGateway.existeCursoPorId(franjaHoraria.getCurso().getId())) {
             formateadorRespuesta.responderEntidadNoEncontradaException("Curso no encontrado");
         }
@@ -35,7 +35,7 @@ public class FranjaHorariaUseCaseAdapter implements FranjaHorariaInputPort {
     }
 
     @Override
-    public List<FranjaHoraria> listarFranjasHorariaPorDocente(Integer idDocente) {
+    public List<FranjaHoraria> listarFranjasHorariaPorDocente(final Integer idDocente) {
         if (!franjaHorariaGateway.existeDocentePorId(idDocente)) {
             formateadorRespuesta.responderEntidadNoEncontradaException("Docente no encontrado");
         }
