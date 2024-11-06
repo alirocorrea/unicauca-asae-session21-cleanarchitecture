@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class FranjaHorariaOutputMapper {
 
-    public static FranjaHorariaEntity buildFranjaHorariaEntity(FranjaHoraria franjaHoraria, CursoEntity cursoEntity, EspacioFisicoEntity espacioFisicoEntity) {
+    public static FranjaHorariaEntity buildFranjaHorariaEntity(final FranjaHoraria franjaHoraria, final CursoEntity cursoEntity, final EspacioFisicoEntity espacioFisicoEntity) {
         FranjaHorariaEntity franjaHorariaEntity = new FranjaHorariaEntity();
         franjaHorariaEntity.setNombre(franjaHoraria.getNombre());
         franjaHorariaEntity.setDia(franjaHoraria.getDia());
@@ -23,7 +23,7 @@ public final class FranjaHorariaOutputMapper {
         return franjaHorariaEntity;
     }
 
-    public static FranjaHoraria buildFranjaHoraria(FranjaHorariaEntity franjaHorariaEntity) {
+    public static FranjaHoraria buildFranjaHoraria(final FranjaHorariaEntity franjaHorariaEntity) {
         CursoEntity cursoEntity = franjaHorariaEntity.getCurso();
         EspacioFisicoEntity espacioFisicoEntity = franjaHorariaEntity.getEspacioFisico();
         return FranjaHoraria.builder()
@@ -37,7 +37,7 @@ public final class FranjaHorariaOutputMapper {
                 .build();
     }
 
-    private static EspacioFisico buildEspacioFisico(EspacioFisicoEntity espacioFisicoEntity) {
+    private static EspacioFisico buildEspacioFisico(final EspacioFisicoEntity espacioFisicoEntity) {
         return EspacioFisico.builder()
                 .id(espacioFisicoEntity.getId())
                 .nombre(espacioFisicoEntity.getNombre())
@@ -45,7 +45,7 @@ public final class FranjaHorariaOutputMapper {
                 .build();
     }
 
-    private static Curso buildCurso(CursoEntity cursoEntity) {
+    private static Curso buildCurso(final CursoEntity cursoEntity) {
         return Curso.builder()
                 .id(cursoEntity.getId())
                 .nombre(cursoEntity.getNombre())
